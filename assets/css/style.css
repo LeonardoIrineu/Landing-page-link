@@ -9,10 +9,29 @@
 
 body {
     font-size: 100%;
-    background: #2c3e50;
-    background: -webkit-linear-gradient(to right, #3498db, #2c3e50);
-    background: linear-gradient(to right, #3498db, #2c3e50);
+    background-image: linear-gradient(45deg, #3498db, #2c3e50, #3498db,
+            #2c3e50);
+    background-size: 300%;
+    animation: colors 15s ease infinite;
 }
+
+/* background animation */
+
+@keyframes colors {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* background animation fim */
 
 .cabecalho {
     display: flex;
@@ -32,19 +51,62 @@ body {
     gap: 32px;
 }
 
+/* botao redes sociais*/
+
 .cabecalho-menu-item {
     font-family: 'Sarala', sans-serif;
     color: #001510;
-    font-weight: 400;
+    border-radius: 10%;
     font-size: 28px;
     cursor: pointer;
     transition: .5s;
 }
 
-.cabecalho-menu-item:hover {
-    color: #ccc;
-    font-size: 24px;
+.instagram:hover {
+    font-size: 26px;
+    background: transparent;
+    color: #C13584;
+    box-shadow: 0 0 5px #833AB4,
+        0 0 25px #833AB4,
+        0 0 50px #833AB4,
+        0 0 200px #833AB4;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
+
+.facebook:hover {
+    font-size: 26px;
+    background: transparent;
+    color: #FFF;
+    box-shadow: 0 0 5px #0857fd,
+        0 0 25px #0857fd,
+        0 0 50px #0857fd,
+        0 0 200px #0857fd;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.linkedin:hover {
+    font-size: 26px;
+    background: transparent;
+    color: #0e2d6c;
+    box-shadow: 0 0 5px #FFF,
+        0 0 25px #FFF,
+        0 0 50px #FFF,
+        0 0 200px #FFF;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.github:hover {
+    font-size: 26px;
+    background: transparent;
+    color: #050801;
+    box-shadow: 0 0 5px #050801,
+        0 0 25px #050801,
+        0 0 50px #050801,
+        0 0 200px #050801;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+/* conteudo main */
 
 .conteudo {
     border-top: .4px solid #535e92;
@@ -96,7 +158,6 @@ body {
 }
 
 .conteudo-principal-escrito-botao:hover {
-    /* background: transparent; */
     color: #001510;
     height: 40px;
     width: 135px;
